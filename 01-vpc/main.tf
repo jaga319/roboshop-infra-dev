@@ -1,5 +1,5 @@
 module "roboshop" {
-    source = "E:/Devops/teraform-aws-vpc"
+    source = "https://github.com/jaga319/teraform-aws-vpc.git"
     project_name = var.project_name
     environment = var.environment
     common_tags = var.common_tags
