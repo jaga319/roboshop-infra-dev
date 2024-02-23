@@ -11,6 +11,9 @@ pipeline {
 
 
     }
+        parameters {
+                       choice(name: 'ACTION', choices: ['APPLY', 'DESTROY'], description: 'Pick something')
+        }
     // Build //
     stages {
         stage('init') {
@@ -30,6 +33,9 @@ pipeline {
             }
         }
         stage('Deploy') {
+            when { 
+                expression { params.ACTION == 'APPLY' }
+            }   
             input {
                 message "Should we continue?"
                 ok "Yes, we should."
