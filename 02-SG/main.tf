@@ -1,5 +1,5 @@
 module "VPN" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name= "VPN"
      environment="DEV"
      vpc_id=data.aws_vpc.default.id
@@ -9,7 +9,7 @@ module "VPN" {
 }
 
 module "mongodb" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -18,7 +18,7 @@ module "mongodb" {
     #  sg_ingress_rules = var.mongodb_sg_ingress_rules
 }
 module "redis" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -28,7 +28,7 @@ module "redis" {
 }
 
 module "mysql" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -38,7 +38,7 @@ module "mysql" {
 }
 
 module "rabbitmq" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -48,7 +48,7 @@ module "rabbitmq" {
 }
 
 module "catalogue" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -59,7 +59,7 @@ module "catalogue" {
 
 
 module "user" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -68,7 +68,7 @@ module "user" {
     #  sg_ingress_rules = var.mongodb_sg_ingress_rules
 }
 module "cart" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -78,7 +78,7 @@ module "cart" {
 }
 
 module "shipping" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -88,7 +88,7 @@ module "shipping" {
 }
 
 module "payment" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -98,7 +98,7 @@ module "payment" {
 }
 
 module "web" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -109,7 +109,7 @@ module "web" {
 
 module "app_alb" {
 
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
@@ -119,7 +119,7 @@ module "app_alb" {
 }
 
 module "web_alb" {
-     source = "E:/Devops/terraform-aws-security-group"
+     source = "git::https://github.com/jaga319/terraform-aws-sg.git?ref=main"
      project_name=var.project_name
      environment=var.environment
      vpc_id=data.aws_ssm_parameter.vpc_id.value
